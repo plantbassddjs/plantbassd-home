@@ -2,13 +2,31 @@
 
 body{
     font-family: 'Barlow', sans-serif;
-    font-size: 1.1em; }
-
+    font-size: 1.2em; 
+}
 footer{
-    font-size: 1em; }
-    
-.bg-black {
-    background-color: black; }
+    font-size: 1em; 
+}
+
+/* ========================= Navbar CSS ============================ */
+/*  blue 384aa2
+    dark blue 26326d
+    green 8b04b
+    dark green 1c9043
+    Orange f9ba63
+    Pink d9689e
+    Purpe 9b519c 
+*/
+.nav-text-size{
+    font-size: 1.6em;
+}
+.bg-nav-colour {
+    background-color: rgba(0,0,0,0.0); 
+}
+
+
+
+
 
 .img-logo {
     max-width: 8%;
@@ -18,7 +36,6 @@ footer{
     .img-logo {
         max-width: 15%; 
     }
-    
 }
 
 @media (max-width:700px){
