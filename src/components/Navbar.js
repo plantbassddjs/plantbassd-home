@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import Navbar from 'react-bootstrap/Navbar'
@@ -11,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
     search: {
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.90),'&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.80),
+        backgroundColor: fade(theme.palette.primary.main, 0.40),'&:hover': {
+            backgroundColor: fade(theme.palette.primary.main, 0.60),
         },
         marginLeft: 0,
         width: '100%',
@@ -46,18 +46,43 @@ const useStyles = makeStyles((theme) => ({
         },
         fontSize: '1.4em'
     },
+    navbarBackgroundTransparent: {
+        backgroundColor: 'rgba(255, 255, 255, 0)'
+    },
+    navbarBackgroundSolid: {
+        backgroundColor: 'rgb(255, 255, 255)'
+    },
 }));
 
-export default function SearchAppBar() {
+export default function NavAppBar() {
     const classes = useStyles();
+    const [navBackground, setNavBackground] = useState('navbarBackgroundTransparent')
+    
+    const navRef = useRef()
+    navRef.current = navBackground
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 310
+            if (show) {
+                setNavBackground('navbarBackgroundSolid')
+            } else {
+                setNavBackground('navbarBackgroundTransparent')
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
-        <Navbar collapseOnSelect expand="lg" className="bg-nav-colour">
+        <Navbar fixed="top" collapseOnSelect expand="lg" className={classes[navRef.current]}>
 
             <Navbar.Brand href="#home">
                 <img
                     alt="plant bassd logo" src={logo}
-                    width="110" height="110"
+                    width="100" height="100"
                     className="d-inline-block align-center"
                 />{' '}
             </Navbar.Brand>

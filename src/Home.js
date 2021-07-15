@@ -1,10 +1,26 @@
 import React from 'react';
 import Iframe from 'react-iframe';
+import Card from 'react-bootstrap/Card'
+import { makeStyles } from '@material-ui/core/styles';
 import guys from './assets/img/guys.jpg';
 
-function Home() {
+const useStyles = makeStyles((theme) => ({
+    cardStyle: {
+        width: '100%',
+    },
+  }));
+
+export default function Home() {
+    const classes = useStyles();
+
     return (
-        <div className="container">
+
+        <Card className={classes.cardStyle}>
+            <Card.Img variant="top" src={guys} />
+        </Card>
+    );
+}
+        {/* <div className="container">
             <div className="mt-5 text-center">
                 <p>DJ/ Party Collective and dance music blog based in Monaghan via Dublin and Edinburgh. Nothin’ But Organic Beats 🌿</p>
                 <p>Enquiries: plantbassddjs@gmail.com</p>
@@ -17,9 +33,9 @@ function Home() {
                             </a>
                         </div>
                 </div>
-            </div>
+            </div> */}
 
-            <h4 className="text-center pt-3">Regularly Updated Selects from our 3 DJs.</h4>
+            {/* <h4 className="text-center pt-3">Regularly Updated Selects from our 3 DJs.</h4>
             <div className="d-flex justify-content-center pb-2">
                 <Iframe url="https://open.spotify.com/embed/playlist/5skAgzUfGmZLwrOPNLnGVf"
                     className="spotify"
@@ -28,8 +44,5 @@ function Home() {
                     allowfullscreen
                     allow="encrypted-media" />
             </div>
-        </div>
-    );
-}
+        </div> */}
 
-export default Home;
