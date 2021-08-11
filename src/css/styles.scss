@@ -1,0 +1,61 @@
+/* ========================= Navbar ============================ */
+/*  blue 384aa2
+    dark blue 26326d
+    green 8b04b
+    dark green 1c9043
+    Orange f9ba63
+    Pink d9689e
+    Purpe 9b519c 
+*/
+
+.nav-style {
+    font-size: 1.4em;
+    padding: 1em 2em;
+    font-weight: 500;
+    background-color: transparent;
+
+    .nav-text {
+        padding: 0em 2em;
+    }
+}
+
+/* ========================= Home Page ============================ */
+
+.homeSection1 {
+    background-color: #26326d;
+    width: 100%;
+    height: 100vh;
+}
+
+.hs1Style {
+    padding: 20% 15% 5% 15%;
+    color: rgba(255,255,255,.75);
+}
+
+.hs1Header {
+    padding-bottom: 1em;
+}
+
+.homeSection2 {
+    background-color: #9b519c;
+    width: 100%;
+    height: 100vh;
+}
+
+.homeSection3 {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ========================= Footer ============================ */
+
+.footer-style {
+    text-align: center;
+    color: #1E1E1E;
+
+    .list-group-item:hover {
+        background-color: #373737;
+        color: #FFFFFF;
+    }
+}
