@@ -8,14 +8,13 @@
     Purpe 9b519c 
 */
 
-.nav-style {
-    font-size: 1.4em;
-    padding: 1em 2em;
+.navStyle {
+    font-size: 1.5em;
+    padding: 0.5em 2em 0.5em 2em;
     font-weight: 500;
-    background-color: transparent;
 
-    .nav-text {
-        padding: 0em 2em;
+    .navText {
+        padding: 0em 1em;
     }
 }
 
@@ -38,14 +37,64 @@
 
 .homeSection2 {
     background-color: #9b519c;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 0em;
+}
+
+.hs2Header {
+    color: rgba(255,255,255,.75);
+    text-transform: uppercase;
+}
+
+.btnStyle {
+    width: 80%;
+    height: 6em;
+    font-size: 1.2em !important;
+    border-color: #1E1E1E !important;
 }
 
 .homeSection3 {
     background-color: #FFFFFF;
     width: 100%;
     height: 100vh;
+}
+
+/* ========================= Card ============================ */
+
+.linkStyler {
+    text-decoration: none;
+    color: #1E1E1E;
+}
+.cardStyle {
+    width: 22rem;
+    padding-bottom: 10em;
+    max-height: 34rem;
+    &:hover {
+        color: black;
+        background-color: #d8d7d7;
+        filter: drop-shadow(
+            0px 6px 6px rgba(0, 0, 0, 0.25)
+        );
+    }
+}
+
+.cardTextEdit {
+    white-space: pre-line;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnColor {
+    background-color: #26326d !important;
+    border: none;
+    &:hover {
+        background-color: #171e44 !important;
+    }
 }
 
 /* ========================= Footer ============================ */

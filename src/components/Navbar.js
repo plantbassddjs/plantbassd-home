@@ -1,5 +1,5 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import logo from '../images/logo_circle.png';
 import '../css/index.css';
 
@@ -7,8 +7,6 @@ import '../css/index.css';
 export default function NavbarComponent() {
 
     var [variant, setVariant] = useState('dark')
-    var navRef = useRef()
-    navRef.current = variant
 
     useEffect(() => {
         var handleScroll = () => {
@@ -19,7 +17,7 @@ export default function NavbarComponent() {
                 setVariant('dark')
             }
         }
-        document.addEventListener('scroll', handleScroll)
+        document.addEventListener('scroll', handleScroll);
         return () => {
             document.removeEventListener('scroll', handleScroll)
         }
@@ -27,9 +25,9 @@ export default function NavbarComponent() {
 
     return (
         <Navbar collapseOnSelect 
-            expand="lg" 
-            className="nav-style"
-            variant={navRef.current}
+            expand="lg"
+            className="navStyle"
+            variant={variant}
             fixed="top">
 
             <Navbar.Brand href="#home">
@@ -42,8 +40,8 @@ export default function NavbarComponent() {
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto nav-text">
-                <Nav.Link href="#">Home</Nav.Link>
+            <Nav className="me-auto navText">
+                <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#">Contact</Nav.Link>
             </Nav>
             </Navbar.Collapse>

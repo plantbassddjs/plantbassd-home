@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import reportWebVitals from './reportWebVitals';
 
 import Navbar from './components/Navbar.js';
-import Home from './pages/Home.js'
+import Home from './pages/Home.js';
+import Takeovers from './pages/Takeovers.js';
 import Footer from './components/Footer.js';
 import {
   BrowserRouter as Router, 
@@ -13,6 +14,7 @@ import {
 
 import './css/index.css';
 import './css/styles.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
@@ -20,7 +22,8 @@ export default function App() {
         <Navbar />
 
         <Switch>
-          {/* <Route path="/about" component={About}>*/}
+          {/* <Route path="/about" component={About} />*/}
+          <Route path="/takeovers" component={Takeovers} />
           <Route path="/" component={Home} /> {/* This path goes last to ensure a default. */}
         </Switch>
 
