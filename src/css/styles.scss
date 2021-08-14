@@ -1,12 +1,5 @@
 /* ========================= Navbar ============================ */
-/*  blue 384aa2
-    dark blue 26326d
-    green 8b04b
-    dark green 1c9043
-    Orange f9ba63
-    Pink d9689e
-    Purpe 9b519c 
-*/
+
 
 .navStyle {
     font-size: 1.5em;
@@ -20,59 +13,64 @@
 
 /* ========================= Home Page ============================ */
 
-.homeSection1 {
-    background-color: #26326d;
+.homeSections {
     width: 100%;
     height: 100vh;
 }
 
+.homeSectionTakeover {
+    max-height: 100vh;
+}
+
 .hs1Style {
     padding: 20% 15% 5% 15%;
-    color: rgba(255,255,255,.75);
 }
 
 .hs1Header {
     padding-bottom: 1em;
 }
 
-.homeSection2 {
-    background-color: #9b519c;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 4% 0em;
+.hsHeader {
+    text-transform: uppercase;
+    padding: 4vh 3vh 4vh 3vh;
 }
 
-.hs2Header {
-    color: rgba(255,255,255,.75);
-    text-transform: uppercase;
+.btnHolder {
+    padding: 0vh 3vh 3vh 3vh;
 }
 
 .btnStyle {
-    width: 80%;
-    height: 6em;
+    width: auto;
+    height: auto;
     font-size: 1.2em !important;
-    border-color: #1E1E1E !important;
 }
 
-.homeSection3 {
-    background-color: #FFFFFF;
-    width: 100%;
-    height: 100vh;
+.cardFlexLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* ========================= Card ============================ */
 
 .linkStyler {
     text-decoration: none;
-    color: #1E1E1E;
 }
+
 .cardStyle {
-    width: 22rem;
-    padding-bottom: 10em;
-    max-height: 34rem;
+    width: 20vw;
+    max-height: 28em;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+
+.cardTextAlign {
+    font-size: 0.9em;
+    padding-bottom: 0.5em !important;
+    white-space: pre-line;
+}
+
+.cardHover {
     &:hover {
         color: black;
         background-color: #d8d7d7;
@@ -81,30 +79,65 @@
         );
     }
 }
+.iframeDiv {
+    width:"80%";
+    height:"400px";
+    margin: 0 auto;
+    display: block;
+}
 
-.cardTextEdit {
-    white-space: pre-line;
+.soundcloudDiv {
+    font-size: 1em; 
+    color: #cccccc;
+    line-break: anywhere;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+}
+
+.soundcloudAnchor {
+    color: #cccccc; 
+    text-decoration: none;
+}
+
+/* =========================== Takeover Page =========================== */
+.takeoverCardStyle {
+    width: 20rem;
+    margin-bottom: 5em;
+}
+
+.takeoverDiv {
+    background-color: #9b519c;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 10% 10%;
 }
 
-.btnColor {
-    background-color: #26326d !important;
-    border: none;
-    &:hover {
-        background-color: #171e44 !important;
-    }
+.takeoverHeader {
+    color: rgba(255,255,255,.75);
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
 }
 
-/* ========================= Footer ============================ */
-
-.footer-style {
+.takeoverText {
+    color: rgba(255,255,255,.75);
+    font-size: 1.2em;
     text-align: center;
-    color: #1E1E1E;
+    padding-bottom: 1.5em;
+}
 
-    .list-group-item:hover {
-        background-color: #373737;
-        color: #FFFFFF;
-    }
+
+
+.takeoverTextEdit {
+    white-space: pre-line;
+    margin: 2% 0%;
+}
+
+.takeoverButton {
+    width: 100% !important;
 }

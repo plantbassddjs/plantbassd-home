@@ -1,0 +1,49 @@
+/*  blue 384aa2
+    dark blue 26326d
+    green 8b04b
+    dark green 1c9043
+    Orange f9ba63
+    Pink d9689e
+    Purpe 9b519c
+    
+*/
+.greyColor {
+    color: #1E1E1E;
+}
+
+.offGrey {
+    color: rgba(30, 30, 30, 0.75);
+}
+
+.offWhite {
+    color: rgba(255,255,255,.75);
+}
+
+.backgroundWhite {
+    background-color: #FFFFFF;
+}
+
+.backgroundPink {
+    background-color: #9b519c;
+}
+
+.backgroundBlue {
+    background-color: #26326d;
+}
+
+.btnBG {
+    background-color: transparent !important;
+    border: none !important;
+    &:hover {
+        background-color: #171e44 !important;
+    }
+}
+
+.footerColors {
+    color: #1E1E1E;
+
+    .list-group-item:hover {
+        background-color: #171e44;
+        color: #FFFFFF;
+    }
+}

@@ -8,12 +8,12 @@ export default function ArtistCard ({artist}) {
 
     return (
             <Card
-                className="takeoverCardStyle">
+                className="takeoverCardStyle cardHover">
 
                 <Card.Img 
                     variant="top" 
                     src={'/artists/' + artist.image + '.jpg'}
-                    className="img-fluid"
+                    className="cardImage"
                     alt={artist.name}/>
 
                 <Card.Body>

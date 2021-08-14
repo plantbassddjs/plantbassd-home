@@ -14,6 +14,7 @@ import {
 
 import './css/index.css';
 import './css/styles.scss';
+import './css/colors.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {

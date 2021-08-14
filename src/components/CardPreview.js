@@ -11,11 +11,9 @@ export default function ArtistCard ({artist}) {
 
     return (
 
-        <Link to={`/takeover/${id}`} className="linkStyler">
-            <Card
-                style={{ cursor: "pointer" }}
-                className="cardStyle">
+        <Link to={`/takeover/${id}`} className="linkStyler greyColor">
 
+            <Card className="cardStyle cardHover">
                 <Card.Img 
                     variant="top" 
                     src={'/artists/' + artist.image + '.jpg'}
@@ -24,7 +22,7 @@ export default function ArtistCard ({artist}) {
 
                 <Card.Body>
                     <Card.Title>{artist.name}</Card.Title>
-                    <Card.Text className="cardTextEdit">
+                    <Card.Text className="cardTextAlign">
                         {description}
                     </Card.Text>
                 </Card.Body>

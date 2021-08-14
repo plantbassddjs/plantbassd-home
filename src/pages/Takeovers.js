@@ -1,7 +1,6 @@
 import artists from '../assets/artists.json';
 import Card from '../components/Card.js';
 import {Col, Row} from 'react-bootstrap'
-import '../css/takeoverStyles.scss'
 
 export default function TakeoverPage () {
 

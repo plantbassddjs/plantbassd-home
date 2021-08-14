@@ -3,7 +3,7 @@ import {ListGroup} from 'react-bootstrap';
 export default function FooterComponent () {
     return (
         <>
-            <ListGroup variant="flush" className="footer-style">
+            <ListGroup variant="flush" className="text-center footerColors">
                 <ListGroup.Item 
                     action
                     href="https://www.instagram.com/plantbassddjs/">
@@ -30,5 +30,5 @@ export default function FooterComponent () {
             {'© '} {new Date().getFullYear()} {" Copyright: Plant Bass'd DJs"}
             </div>
         </>
-      )
-    }
+    )
+}
