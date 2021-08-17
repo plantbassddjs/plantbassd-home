@@ -1,38 +1,35 @@
-import {useState} from 'react';
-import {Button, Card, Collapse} from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
+import {Link } from "react-router-dom";
 
 
 export default function ArtistCard ({artist}) {
 
-    const [open, setOpen] = useState(false);
+    var description = artist.description.split("\n");
+    // first slice gets list item 3. 
+    // Then put to string and get string length of 100.
+    description = description.slice(3,4).toString().slice(0,100);
+
+    var id = artist.image.split("_").slice(1);
 
     return (
-            <Card
-                className="takeoverCardStyle cardHover">
 
+        <Link to={`/takeover/${id}`} className="linkStyler greyColor">
+
+            <Card className="cardStyle cardHover">
                 <Card.Img 
                     variant="top" 
                     src={'/artists/' + artist.image + '.jpg'}
-                    className="cardImage"
+                    className="img-fluid"
                     alt={artist.name}/>
 
                 <Card.Body>
-
-                        <Button
-                            className="btnColor takeoverButton"
-                            onClick={() => setOpen(!open)}
-                            aria-controls="example-collapse-text"
-                            aria-expanded={open} >
-                            {artist.name}
-                        </Button>
-
-                        <Collapse in={open}>
-                            <Card.Text className="takeoverTextEdit">
-                                {artist.description}
-                            </Card.Text>
-                        </Collapse>
-                    
+                    <Card.Title>{artist.name}</Card.Title>
+                    <Card.Text className="cardTextAlign">
+                        {description}... 
+                    </Card.Text>
                 </Card.Body>
+
             </Card>
+        </Link>
     );
 }

@@ -23,26 +23,40 @@
 }
 
 .hs1Style {
-    padding: 20% 15% 5% 15%;
+    // padding: 25% 15% 5% 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 20%;
 }
 
 .hs1Header {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .hsHeader {
     text-transform: uppercase;
-    padding: 4vh 3vh 4vh 3vh;
+    padding: 4% 0% 0% 8%;
+    margin-bottom: 3%;
 }
 
-.btnHolder {
-    padding: 0vh 3vh 3vh 3vh;
+.aboutBtnHolder {
+    text-align: right;
+    margin-top: 5%;
+}
+
+.takeoverBtnHolder {
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 3%;
 }
 
 .btnStyle {
     width: auto;
     height: auto;
-    font-size: 1.2em !important;
+    font-size: 1.4em !important;
 }
 
 .cardFlexLayout {
@@ -59,14 +73,12 @@
 
 .cardStyle {
     width: 20vw;
-    max-height: 28em;
-    margin-bottom: 3vh;
+    margin-bottom: 5%;
     cursor: pointer;
 }
 
 .cardTextAlign {
-    font-size: 0.9em;
-    padding-bottom: 0.5em !important;
+    font-size: 1em;
     white-space: pre-line;
 }
 
@@ -80,42 +92,42 @@
     }
 }
 .iframeDiv {
-    width:"80%";
-    height:"400px";
+    width:40%;
+    height:60vh;
     margin: 0 auto;
-    display: block;
+}
+
+Iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .soundcloudDiv {
-    font-size: 1em; 
-    color: #cccccc;
+    font-size: 1.2em; 
+    color: #464444;
     line-break: anywhere;
     word-break: normal;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; 
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-weight: 100;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: 600;
 }
 
 .soundcloudAnchor {
-    color: #cccccc; 
+    color: #464444;
     text-decoration: none;
 }
 
 /* =========================== Takeover Page =========================== */
-.takeoverCardStyle {
-    width: 20rem;
-    margin-bottom: 5em;
-}
 
 .takeoverDiv {
-    background-color: #9b519c;
+    background-color: #1c9043;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10% 10%;
+    padding: 5% 10%;
 }
 
 .takeoverHeader {
@@ -131,13 +143,12 @@
     padding-bottom: 1.5em;
 }
 
-
-
-.takeoverTextEdit {
-    white-space: pre-line;
-    margin: 2% 0%;
+.takeoverCardStyle {
+    width: 20rem;
+    margin-bottom: 5em;
+    cursor: pointer;
 }
 
-.takeoverButton {
-    width: 100% !important;
+.modalArtistDescription {
+    white-space: pre-line;
 }
