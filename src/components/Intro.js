@@ -36,7 +36,7 @@ export default function IntroCard() {
                         Nothin' But Organic Beats 🌿
                     </h1>
 
-                    <div className="aboutBtnHolder">
+                    <div className="aboutBtnHolder bolder">
                         <Button onClick={() => handleClick("about")}
                             className="offWhite btnBG btnStyle">
                             CONTACT US
