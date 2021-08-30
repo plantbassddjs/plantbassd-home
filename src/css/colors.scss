@@ -11,12 +11,16 @@
     color: #1E1E1E;
 }
 
+.whiteColor{
+    color: rgb(255,255,255);
+}
+
 .offGrey {
     color: rgba(30, 30, 30, 0.85);
 }
 
 .offWhite {
-    color: rgba(255,255,255,.75);
+    color: rgba(255,255,255,.75) !important;
 }
 
 .backgroundWhite {

@@ -1,7 +1,6 @@
 import {Card} from 'react-bootstrap'
 import {Link } from "react-router-dom";
 
-
 export default function ArtistCard ({artist}) {
 
     var description = artist.description.split("\n");
@@ -13,7 +12,7 @@ export default function ArtistCard ({artist}) {
 
     return (
 
-        <Link to={`/takeover/${id}`} className="linkStyler greyColor">
+        <Link to={`/takeovers/${id}`} className="linkStyler greyColor">
 
             <Card className="cardStyle cardHover">
                 <Card.Img 

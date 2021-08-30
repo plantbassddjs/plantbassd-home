@@ -25,8 +25,8 @@ export default function FooterComponent () {
                     <em className="fab fa-soundcloud"></em> Soundcloud
                 </ListGroup.Item>
             </ListGroup>
-
-            <div className="text-center py-3">
+            <hr style={{margin: '0rem 0 0.5rem 0'}}></hr>
+            <div className="float-end py-3 pe-2">
             {'© '} {new Date().getFullYear()} {" Copyright: Plant Bass'd DJs"}
             </div>
         </>

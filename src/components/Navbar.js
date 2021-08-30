@@ -6,15 +6,15 @@ import '../css/index.css';
 
 export default function NavbarComponent() {
 
-    var [variant, setVariant] = useState('dark')
+    var [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         var handleScroll = () => {
-            var nextDiv = window.scrollY > 900
+            var nextDiv = window.scrollY > 960
             if (nextDiv) {
-                setVariant('light')
+                setScrolled(true);
             } else {
-                setVariant('dark')
+                setScrolled(false);
             }
         }
         document.addEventListener('scroll', handleScroll);
@@ -26,8 +26,8 @@ export default function NavbarComponent() {
     return (
         <Navbar collapseOnSelect 
             expand="lg"
-            className="navStyle"
-            variant={variant}
+            className={`navStyle ${scrolled ? "backgroundNavbar" : ""}`}
+            variant='dark'
             fixed="top">
 
             <Navbar.Brand href="#home">
@@ -40,9 +40,9 @@ export default function NavbarComponent() {
 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto navText">
+            <Nav className="navText">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="#">Contact</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Navbar>

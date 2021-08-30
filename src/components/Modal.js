@@ -1,7 +1,10 @@
 import {Button, Modal} from 'react-bootstrap'
+import {Link } from "react-router-dom";
 
 
 export default function ArtistModal ({artist, onClick, onHide}) {
+
+    var playlist = 'https://open.spotify.com/playlist/5skAgzUfGmZLwrOPNLnGVf?si=ca0f5ffdba8e4868'
 
     return (
         <div>
@@ -20,7 +23,12 @@ export default function ArtistModal ({artist, onClick, onHide}) {
 
                 <Modal.Body className="modalArtistDescription">
                     {artist.description}
+
                 </Modal.Body>
+
+                <div className="modalLinks">
+                    Spotify Playlist: <Link to={playlist}>{playlist}</Link> 🌿
+                </div>
                 
                 <Modal.Footer>
                     <Button 

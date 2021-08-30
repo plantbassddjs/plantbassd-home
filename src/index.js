@@ -23,9 +23,11 @@ export default function App() {
         <Navbar />
 
         <Switch>
-          {/* <Route path="/about" component={About} />*/}
+          {/* <Route path="/about" component={About} /> */}
           <Route path="/takeovers" component={Takeovers} />
-          <Route path="/" component={Home} /> {/* This path goes last to ensure a default. */}
+
+          {/* This path goes last to ensure a default. */}
+          <Route path="/" component={Home} />
         </Switch>
 
         <Footer />
