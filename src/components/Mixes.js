@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 
 import itsnotradio from "../assets/images/itsnotradio.jpg";
@@ -8,7 +10,7 @@ import "../css/mixes.scss";
 export default function ArtistCard() {
 	return (
 		<>
-			<h1 className="offGrey-1 mixHeader-2">Plant Bass'd Mixes</h1>
+			<h1 className="offGrey-1 mixHeader-2">Plant Bass&apos;d Mixes</h1>
 
 			<Container>
 				<Row className="align-items-center">
@@ -35,8 +37,8 @@ export default function ArtistCard() {
 							<h1>Club-Ready</h1>
 							<h3>Heavy mixes for the club.</h3>
 							<p>
-								We've broadcasted Techno, Electro, Jungle on
-								ITSNOTRADIO, Aurora, and Common Grounds.
+								We&apos;ve broadcasted Techno, Electro, Jungle
+								on ITSNOTRADIO, Aurora, and Common Grounds.
 							</p>
 						</div>
 
@@ -50,9 +52,9 @@ export default function ArtistCard() {
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
 									d="M17 8l4 4m0 0l-4 4m4-4H3"
 								></path>
 							</svg>
@@ -79,8 +81,8 @@ export default function ArtistCard() {
 							<h1>Chill-out</h1>
 							<h3>Easy listening selections.</h3>
 							<p>
-								We've broadcasted Disco, Dance, Electronic music
-								for late risers on SET Radio.
+								We&apos;ve broadcasted Disco, Dance, Electronic
+								music for late risers on SET Radio.
 							</p>
 						</div>
 
@@ -102,9 +104,9 @@ export default function ArtistCard() {
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="2"
 									d="M7 16l-4-4m0 0l4-4m-4 4h18"
 								></path>
 							</svg>

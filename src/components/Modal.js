@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Button, Modal } from "react-bootstrap";
 import "../css/modal.scss";
 
@@ -23,19 +25,19 @@ export default function ArtistModal({ artist, onClick, onHide }) {
 
 				<div className="modalFlexBox py-2">
 					<Button href={playlist} variant="spotify">
-						<i class="lab la-spotify"></i> Spotify Playlist
+						<i className="lab la-spotify"></i> Spotify Playlist
 					</Button>
 					<Button href={artist.page} variant="insta">
-						<i class="lab la-instagram"></i> {artist.name}
+						<i className="lab la-instagram"></i> {artist.name}
 					</Button>
 					<Button
 						href="https://www.instagram.com/eggboy_design/"
 						variant="eggboy"
 					>
-						<i class="las la-palette"></i> Graphics
+						<i className="las la-palette"></i> Graphics
 					</Button>
 					<Button href={artist.post} variant="post">
-						<i class="las la-leaf"></i> Insta Post
+						<i className="las la-leaf"></i> Insta Post
 					</Button>
 				</div>
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 import ArtistModal from "../components/Modal.js";
@@ -43,7 +43,7 @@ export default function TakeoverPage() {
 				</div>
 
 				<h1 className="offWhite-1 toHeader-5">
-					Plant Bass'd Takeovers
+					Plant Bass&apos;d Takeovers
 				</h1>
 
 				<p className="offWhite-1 toText-5">

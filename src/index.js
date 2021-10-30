@@ -15,7 +15,7 @@ import ContactPage from "./pages/ContactPage.js";
 import PageNotFound from "./pages/PageNotFound.js";
 import reportWebVitals from "./reportWebVitals";
 
-export function PublicLayout(props) {
+export function PublicLayout() {
 	return (
 		<div className="App">
 			<Navbar />

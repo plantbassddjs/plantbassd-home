@@ -1,3 +1,5 @@
+import React from "react";
+
 import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
 
 import bgPic from "../assets/images/blueboys.jpg";

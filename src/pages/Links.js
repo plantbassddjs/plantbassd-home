@@ -1,3 +1,5 @@
+import React from "react";
+
 import logo from "../assets/images/logo_circle.png";
 import "../css/links.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
@@ -56,7 +58,7 @@ export default function Links() {
 				</Row>
 				<Row>
 					<Col className="d-flex justify-content-center">
-						<h1>Plant Bass'd DJs</h1>
+						<h1>Plant Bass&apos;d DJs</h1>
 					</Col>
 				</Row>
 				<Row>
@@ -71,7 +73,7 @@ export default function Links() {
 				<Icons />
 
 				{linktree.map((item, index) => (
-					<Row className="buttonStyle">
+					<Row key={index} className="buttonStyle">
 						<Button
 							href={item.link}
 							size="lg"

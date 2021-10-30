@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,9 @@ export default function Takeover() {
 
 	return (
 		<>
-			<h1 className="offWhite-1 toHeader-3">Plant Bass'd Takeovers</h1>
+			<h1 className="offWhite-1 toHeader-3">
+				Plant Bass&apos;d Takeovers
+			</h1>
 			<Container>
 				<Row xs={1} md={1}>
 					{takeoverArtists.map((artist, index) => (

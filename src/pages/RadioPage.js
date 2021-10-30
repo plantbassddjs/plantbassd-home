@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 import ArtistModal from "../components/Modal.js";
@@ -36,17 +36,19 @@ export default function RadioPage() {
 						width="80%"
 						height="360"
 						scrolling="no"
-						frameborder="no"
+						frameBorder="no"
 						allow="autoplay"
 						src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1332230617&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
 					></iframe>
 				</div>
 
-				<h1 className="offWhite-1 radioHeader-6">Plant Bass'd Radio</h1>
+				<h1 className="offWhite-1 radioHeader-6">
+					Plant Bass&apos;d Radio
+				</h1>
 
 				<p className="offWhite-1 radioText-6 radioGrid-6">
-					Check out some guest mixes selected for the Plant Bass'd
-					Radio.
+					Check out some guest mixes selected for the Plant
+					Bass&apos;d Radio.
 				</p>
 
 				<Row className="g-3 radioGrid-6">

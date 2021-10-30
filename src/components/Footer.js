@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Container, Col, Row } from "react-bootstrap";
 import "../css/footer.scss";
 
@@ -7,7 +9,7 @@ import { ReactComponent as Soundcloud } from "../assets/images/soundcloud.svg";
 import { ReactComponent as Spotify } from "../assets/images/spotify.svg";
 import { ReactComponent as Facebook } from "../assets/images/facebook.svg";
 
-const Icon = ({ SocialMedia, link }) => (
+const Icon = ({ link, SocialMedia }) => (
 	<Col className="d-flex justify-content-center">
 		<a href={link}>{SocialMedia}</a>
 	</Col>
