@@ -1,50 +1,69 @@
-import { Navbar, Nav } from 'react-bootstrap';
-import {useEffect, useState} from 'react';
-import logo from '../images/logo_circle.png';
-import '../css/index.css';
-
+import { Navbar, Nav } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import logo from "../assets/images/logo_circle.png";
+import "../css/navbar.scss";
 
 export default function NavbarComponent() {
+	const [show, setShow] = useState(true);
+	const controlNavbar = () => {
+		if (window.scrollY > 300) {
+			setShow(false);
+		} else {
+			setShow(true);
+		}
+	};
 
-    var [scrolled, setScrolled] = useState(false);
+	useEffect(() => {
+		window.addEventListener("scroll", controlNavbar);
+		return () => {
+			window.removeEventListener("scroll", controlNavbar);
+		};
+	}, []);
 
-    useEffect(() => {
-        var handleScroll = () => {
-            var nextDiv = window.scrollY > 960
-            if (nextDiv) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        }
-        document.addEventListener('scroll', handleScroll);
-        return () => {
-            document.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
+	return (
+		<>
+			{show ? (
+				<Navbar
+					collapseOnSelect
+					expand="lg"
+					className="navStyle p-4"
+					fixed="top"
+				>
+					<Navbar.Brand href="/">
+						<img
+							alt="plant bassd logo"
+							src={logo}
+							width="100"
+							height="100"
+							className="d-inline-block align-top"
+						/>{" "}
+					</Navbar.Brand>
 
-    return (
-        <Navbar collapseOnSelect 
-            expand="lg"
-            className={`navStyle ${scrolled ? "backgroundNavbar" : ""}`}
-            variant='dark'
-            fixed="top">
-
-            <Navbar.Brand href="#home">
-                <img
-                alt="plant bassd logo" src={logo}
-                width="100" height="100"
-                className="d-inline-block align-top"
-                />{' '}
-            </Navbar.Brand>
-
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="navText">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About</Nav.Link>
-            </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    );
+					<Navbar.Toggle
+						aria-controls="responsive-navbar-nav"
+						className="navbar-dark"
+					/>
+					<Navbar.Collapse
+						id="responsive-navbar-nav"
+						className="justify-content-end"
+					>
+						<Nav>
+							<Nav.Link className="px-4" href="/">
+								<h4 className="linkText">Home</h4>
+							</Nav.Link>
+							<Nav.Link className="px-4" href="/radio">
+								<h4 className="linkText">Radio</h4>
+							</Nav.Link>
+							<Nav.Link className="px-4" href="/takeovers">
+								<h4 className="linkText">Takeovers</h4>
+							</Nav.Link>
+							<Nav.Link className="px-4" href="/contact-us">
+								<h4 className="linkText">Contact Us</h4>
+							</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+			) : null}
+		</>
+	);
 }

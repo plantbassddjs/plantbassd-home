@@ -15,26 +15,6 @@
     color: rgb(255,255,255);
 }
 
-.offGrey {
-    color: rgba(30, 30, 30, 0.85);
-}
-
-.offWhite {
-    color: rgba(255,255,255,.75) !important;
-}
-
-.backgroundWhite {
-    background-color: #FFFFFF;
-}
-
-.backgroundPink {
-    background-color: #9b519c;
-}
-
-.backgroundBlue {
-    background-color: #26326d;
-}
-
 .btnBG {
     background-color: transparent !important;
     border: none !important;
@@ -44,7 +24,8 @@
 }
 
 .footerColors {
-    color: #1E1E1E;
+    color: #FFFFFF;
+    background-color: #171e44;
 
     .list-group-item:hover {
         background-color: #171e44;

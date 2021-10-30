@@ -1,44 +1,50 @@
-import {Button, Modal} from 'react-bootstrap'
-import {Link } from "react-router-dom";
+import { Button, Modal } from "react-bootstrap";
+import "../css/modal.scss";
 
+export default function ArtistModal({ artist, onClick, onHide }) {
+	const playlist =
+		"https://open.spotify.com/playlist/5skAgzUfGmZLwrOPNLnGVf?si=ca0f5ffdba8e4868";
 
-export default function ArtistModal ({artist, onClick, onHide}) {
+	return (
+		<div>
+			<Modal
+				size="lg"
+				show={artist.show}
+				centered
+				onHide={() => onHide()}
+			>
+				<Modal.Header closeButton>
+					<Modal.Title>{artist.name}</Modal.Title>
+				</Modal.Header>
 
-    var playlist = 'https://open.spotify.com/playlist/5skAgzUfGmZLwrOPNLnGVf?si=ca0f5ffdba8e4868'
+				<Modal.Body className="modalArtistDescription">
+					{artist.description}
+				</Modal.Body>
 
-    return (
-        <div>
-            <Modal 
-                size="lg" 
-                show={artist.show} 
-                centered 
-                onHide={() => onHide()}
-            >
+				<div className="modalFlexBox py-2">
+					<Button href={playlist} variant="spotify">
+						<i class="lab la-spotify"></i> Spotify Playlist
+					</Button>
+					<Button href={artist.page} variant="insta">
+						<i class="lab la-instagram"></i> {artist.name}
+					</Button>
+					<Button
+						href="https://www.instagram.com/eggboy_design/"
+						variant="eggboy"
+					>
+						<i class="las la-palette"></i> Graphics
+					</Button>
+					<Button href={artist.post} variant="post">
+						<i class="las la-leaf"></i> Insta Post
+					</Button>
+				</div>
 
-                <Modal.Header closeButton>
-                    <Modal.Title>
-                        {artist.name}
-                    </Modal.Title>
-                </Modal.Header>
-
-                <Modal.Body className="modalArtistDescription">
-                    {artist.description}
-
-                </Modal.Body>
-
-                <div className="modalLinks">
-                    Spotify Playlist: <Link to={playlist}>{playlist}</Link> 🌿
-                </div>
-                
-                <Modal.Footer>
-                    <Button 
-                        variant="secondary" 
-                        onClick={() => onClick()}
-                    >
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </div>
-    )
+				<Modal.Footer>
+					<Button variant="secondary" onClick={() => onClick()}>
+						Close
+					</Button>
+				</Modal.Footer>
+			</Modal>
+		</div>
+	);
 }

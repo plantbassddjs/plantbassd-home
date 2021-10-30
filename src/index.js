@@ -1,45 +1,54 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Footer from "./components/Footer.js";
+import Navbar from "./components/Navbar.js";
+import "./css/colors.scss";
+import "./index.css";
 
-import Navbar from './components/Navbar.js';
-import Home from './pages/Home.js';
-import Takeovers from './pages/Takeovers.js';
-import Footer from './components/Footer.js';
-import {
-  BrowserRouter as Router, 
-  Switch, 
-  Route 
-} from 'react-router-dom';
+import Home from "./pages/Home.js";
+import Links from "./pages/Links.js";
+import RadioPage from "./pages/RadioPage.js";
+import TakeoverPage from "./pages/TakeoverPage.js";
+import ContactPage from "./pages/ContactPage.js";
+import PageNotFound from "./pages/PageNotFound.js";
+import reportWebVitals from "./reportWebVitals";
 
-import './css/index.css';
-import './css/styles.scss';
-import './css/colors.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
+export function PublicLayout(props) {
+	return (
+		<div className="App">
+			<Navbar />
+
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/radio" component={RadioPage} />
+				<Route path="/takeovers" component={TakeoverPage} />
+				<Route path="/contact-us" component={ContactPage} />
+				<Route component={PageNotFound} />
+			</Switch>
+
+			<Footer />
+		</div>
+	);
+}
 
 export default function App() {
-  return (
-      <div className="App">
-        <Navbar />
-
-        <Switch>
-          {/* <Route path="/about" component={About} /> */}
-          <Route path="/takeovers" component={Takeovers} />
-
-          {/* This path goes last to ensure a default. */}
-          <Route path="/" component={Home} />
-        </Switch>
-
-        <Footer />
-      </div>
-  );
+	return (
+		<div className="App">
+			<Switch>
+				<Route path="/links" component={Links} />
+				<Route path="/" component={PublicLayout} />
+			</Switch>
+		</div>
+	);
 }
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
+	<Router>
+		<App />
+	</Router>,
+	document.getElementById("root")
 );
 
 reportWebVitals();

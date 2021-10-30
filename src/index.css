@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "Molengo";
+	src: local("Molengo"),
+		url(./assets/fonts/Molengo-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Messina";
+	src: local("Messina"), url(./assets/fonts/Messina.ttf) format("truetype");
+}
+
+body {
+	margin: 0;
+	font-family: "Molengo", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

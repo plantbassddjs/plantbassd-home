@@ -1,0 +1,38 @@
+.mixHeader-2 {
+	text-align: center;
+	padding: 0 0 4vmax 0;
+	font-size: 4rem;
+}
+
+.radioImage-2 {
+	max-width: 60%;
+	transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+	transform-origin: center center;
+}
+
+.radioImage-2:hover {
+	transform: scale(1.04);
+}
+
+.phoneMargin-2 {
+	margin-top: 3rem;
+	margin-bottom: 0rem;
+}
+
+@media (max-width: 1200px) {
+	.phoneMargin-2 {
+		margin-top: 1.2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.phoneMargin-2 {
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+	}
+}
+
+.bottomBtn-2 {
+	margin-top: 5rem;
+}
